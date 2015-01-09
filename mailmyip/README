@@ -1,0 +1,23 @@
+# As root, install ssmpt (simple sendmail program)
+
+apt-get install ssmtp
+
+# Move to ssmtp config directory and edit the ssmtp.conf file.
+
+cd /etc/ssmtp
+
+# A sample ssmtp.conf is in the directory
+
+# As it will contain a password, make sure
+# only root can read it.
+
+chmod 0640 ./ssmpt.conf
+
+# As root, copy mailmyip into 
+
+cp ./mailmyip /etc/network/if-up.d/mailmyip
+
+# Remember to chmod +x so that it runs.
+
+chmod +x /etc/network/if-up.d/mailmyip
+
