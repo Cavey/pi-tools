@@ -1,5 +1,4 @@
-pi-tools
-========
+#pi-tools
 
 Tools for use with a raspberry pi (aimed at newer users).  
 
@@ -9,8 +8,7 @@ Currently includes:
 * mailmyip
 * zeroconf-dns
 
-noroot-gpio
-===========
+##noroot-gpio
 
 Sets up the GPIO pins to be either accessible by non-root users or can secure them again.  If you are wanting it to be enabled on boot, adding something to cron should work.  i.e.
 
@@ -20,8 +18,7 @@ and add the line
 
 @reboot /path/to/export_gpio.sh
 
-mailmyip
-========
+##mailmyip
 
 Respbery Pis are often used headless (ie without a monitor) and SSHing into it.  If your network does not handle DHCP leases well, you will find the local IP changes constantly.  
 
@@ -31,8 +28,7 @@ The file "mailmyip" needs to go into /etc/network/if-up.d so that it is run on b
 
 See the content of mailmyip/README for how to install SSMTP and copy riles around.  Remember to run the commands as root..
 
-zeroconf-dns
-============
+##zeroconf-dns
 
 An alternative to mailmyip, using avhi can work on a network without internet access.
 
